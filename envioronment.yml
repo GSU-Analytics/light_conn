@@ -1,0 +1,9 @@
+name: light_conn
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.10
+  - pandas
+  - keyring
+  - oracledb 
