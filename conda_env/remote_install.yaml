@@ -10,5 +10,6 @@ channels:
   - defaults
 dependencies:
   - python>=3.10
+  - pip
   - pip:
     - git+https://github.com/GSU-Analytics/light_conn.git
