@@ -1,1 +1,1 @@
-from oracle_connect import LightOracleConnection
+from .oracle_connect import LightOracleConnection
