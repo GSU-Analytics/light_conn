@@ -1,4 +1,4 @@
-# config.py
+# config_example.py
 
 """
 
@@ -20,13 +20,13 @@ Attributes:
     lib_dir (str): The directory path where the Oracle Client libraries are located.
     oracle_dsn (str): The Data Source Name for the Oracle database connection.
 
-Example usage with `oracle_connect.py`:
-    from oracle_connect import LightOracleConnection
-    import setup
+Example usage with lightoracle:
+    from lightoracle import LightOracleConnection
+    from config import oracle_user, oracle_dsn, lib_dir
     
-    oracle_conn = LightOracleConnection(user=config.oracle_user,
-                                        dsn=config.oracle_dsn,
-                                        lib_dir=config.lib_dir)
+    oracle_conn = LightOracleConnection(user=oracle_user,
+                                        dsn=oracle_dsn,
+                                        lib_dir=lib_dir)
     oracle_conn.connect()
 
 Note:

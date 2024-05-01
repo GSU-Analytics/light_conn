@@ -1,6 +1,6 @@
 # example.py
 
-from light_conn import LightOracleConnection
+from lightoracle import LightOracleConnection
 from config import oracle_user, lib_dir, oracle_dsn
 
 query = """
