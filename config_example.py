@@ -3,7 +3,7 @@
 """
 
 ****************************************************************************************************
-*       ADD YOUR OWN CREDENTIALS AND CONNECTION DETAILS. THEN RENAME THIS FILE TO config.py        *
+*       ADD YOUR OWN CREDENTIALS AND CONNECTION DETAILS. THEN RENAME THIS FILE TO `config.py`      *
 ****************************************************************************************************
 
 Configuration settings for database connections, including credentials and connection details.
@@ -24,9 +24,9 @@ Example usage with `oracle_connect.py`:
     from oracle_connect import LightOracleConnection
     import setup
     
-    oracle_conn = LightOracleConnection(user=setup.oracle_user,
-                                        dsn=setup.oracle_dsn,
-                                        lib_dir=setup.lib_dir)
+    oracle_conn = LightOracleConnection(user=config.oracle_user,
+                                        dsn=config.oracle_dsn,
+                                        lib_dir=config.lib_dir)
     oracle_conn.connect()
 
 Note:

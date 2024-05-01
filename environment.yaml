@@ -1,0 +1,12 @@
+# To install this environment, use the following command:
+# conda env create -f environment.yaml
+# After creating the environment, activate it with:
+# conda activate light_conn
+
+name: light_conn
+channels:
+  - defaults
+dependencies:
+  - python>=3.10
+  - pip:
+    - git+https://github.com/GSU-Analytics/light_conn.git
