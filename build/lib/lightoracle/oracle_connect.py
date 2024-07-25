@@ -70,6 +70,7 @@ class LightOracleConnection:
         password = keyring.get_password('LightOracleConnection', self.user)
         if password is None:
             # If not found, prompt the user to enter the password
+            #password = input(f"Enter the password for {self.user}: ")
             password = getpass(prompt = f"Enter the password for {self.user}: ")
             # Store the password in the keyring
             keyring.set_password('LightOracleConnection', self.user, password)
@@ -77,6 +78,7 @@ class LightOracleConnection:
 
     def reset_password(self):
         # Prompt the user to enter a new password
+        #new_password = input(f"Enter the new password for {self.user}: ")
         new_password = getpass(prompt = f"Enter the password for {self.user}: ")
         # Store the new password in the keyring
         keyring.set_password('LightOracleConnection', self.user, new_password)
