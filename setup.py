@@ -13,5 +13,11 @@ setup(
     author_email='ikerson@gsu.edu',
     description='A lightweight Oracle database connection handler.',
     keywords='oracle database connection pandas',
-    url='https://github.com/GSU-Analytics/lightoracle.git'
+    url='https://github.com/GSU-Analytics/lightoracle.git', 
+        classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: Windows",
+    ],
+    python_requires='>=3.10',
 )

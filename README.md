@@ -5,37 +5,12 @@ A lightweight Oracle database connection handler for managing secure database in
 
 ## Installation Instructions
 
-### Local Installation
-
-For local installation, particularly useful if you plan to contribute to the package or need a development setup:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/GSU-Analytics/lightoracle.git
-   cd lightoracle
-   ```
-
-2. **Create and Activate the Conda Environment**:
-   Use the `local_install.yaml` located in the conda_env folder to set up an environment with all necessary dependencies 
-   installed via Conda. Navigate to the directory containing `local_install.yaml`, or specify the full path to the file.
-
-   ```bash
-   conda env create -f local_install.yaml
-   conda activate lightoracle
-   ```
-
-3. **Install the Package Locally**:
-   This step installs the current local version of the package into the Conda environment.
-   ```bash
-   pip install .
-   ```
-
 ### Remote Installation
 
 This approach does not require cloning the repository as it installs the package directly from the remote repository. This is useful 
 for users who only need to use the package without contributing to its development.
 
-1. **Create and Activate the Conda Environment**:
+1. **Create a Conda Environment, Install Package, and Activate Environment**:
    Copy the `remote_install.yaml` located in the conda_env folder to your local machine. 
 
    ```yaml
@@ -57,6 +32,40 @@ for users who only need to use the package without contributing to its developme
       conda env create -f remote_install.yaml
       conda activate lightoracle
       ```
+
+2. **Install the Package in Existing Environment**:
+   ```cmd
+   pip install git+https://github.com/GSU-Analytics/light_conn.git
+   ```
+3. **Update the Package in Existing Environment**:
+   ```cmd
+   pip install --upgrade git+https://github.com/GSU-Analytics/light_conn.git
+   ```
+
+### Local Installation
+
+For local installation, particularly useful if you plan to contribute to the package or need a development setup:
+
+1. **Clone the Repository**:
+   ```cmd
+   git clone https://github.com/GSU-Analytics/lightoracle.git
+   cd lightoracle
+   ```
+
+2. **Create and Activate the Conda Environment**:
+   Use the `local_install.yaml` located in the conda_env folder to set up an environment with all necessary dependencies 
+   installed via Conda. Navigate to the directory containing `local_install.yaml`, or specify the full path to the file.
+
+   ```cmd
+   conda env create -f local_install.yaml
+   conda activate lightoracle
+   ```
+
+3. **Install the Package Locally**:
+   This step installs the current local version of the package into the Conda environment.
+   ```cmd
+   pip install .
+   ```
 
 ## Usage
 
@@ -94,8 +103,8 @@ from config import oracle_user, lib_dir, oracle_dsn
 # Create a connection instance with the configured parameters
 oracle_conn = LightOracleConnection(oracle_user, oracle_dsn, lib_dir)
 
-# Connect to the Oracle database
-oracle_conn.connect()
+# Test the Oracle database connection
+oracle_conn.test_connection()
 
 # Now you can use `oracle_conn` to perform database operations
 ```
