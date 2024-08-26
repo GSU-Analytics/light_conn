@@ -98,10 +98,10 @@ With your `config.py` file set up, you can use the `LightOracleConnection` class
 
 # main.py
 from lightoracle import LightOracleConnection
-from config import user, lib_dir, dsn
+from config import user, dsn, lib_dir
 
 # Create a connection instance with the configured parameters
-oracle_conn = LightOracleConnection(oracle_user, oracle_dsn, lib_dir)
+oracle_conn = LightOracleConnection(user, dsn, lib_dir)
 
 # Test the Oracle database connection
 oracle_conn.test_connection()
