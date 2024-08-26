@@ -75,9 +75,9 @@ To establish a connection to an Oracle database using the `LightOracleConnection
 
 The `config_example.py` file contains essential attributes for setting up your Oracle database connection. Before you begin using the `LightOracleConnection`, make sure you have correctly configured the following attributes:
 
-- `oracle_user`: Your Oracle database username.
+- `user`: Your Oracle database username.
+- `dsn`: The Data Source Name for the Oracle database connection, which typically includes the hostname, port, and database name.
 - `lib_dir`: The directory path to the Oracle Client libraries on your machine. This is necessary if your Oracle Client libraries are not included in your system's PATH environment variable.
-- `oracle_dsn`: The Data Source Name for the Oracle database connection, which typically includes the hostname, port, and database name.
 
 Here's an example of how to set up `config_example.py`:
 
@@ -86,8 +86,8 @@ Here's an example of how to set up `config_example.py`:
 
 # Oracle Connection details
 user = "your_username_here"
-lib_dir = "C:/path/to/your/oracle/client/libraries"  # Only set this if necessary
 dsn = "your_dsn_here"
+lib_dir = "C:/path/to/your/oracle/client/libraries"  # Only set this if necessary
 ```
 
 ### Connecting to the Database
@@ -123,7 +123,7 @@ See the `example.py` file for a simple example of how to use the `LightOracleCon
 # example.py
 
 from lightoracle import LightOracleConnection
-from config import oracle_user, lib_dir, oracle_dsn
+from config import user, dsn, lib_dir
 
 query = """
 SELECT
@@ -139,7 +139,7 @@ AND s.major = 'PHY'
 FETCH FIRST 20 ROWS ONLY
 """
 
-oracle_conn = LightOracleConnection(oracle_user, oracle_dsn, lib_dir)
+oracle_conn = LightOracleConnection(user, dsn, lib_dir)
 print("Connecting to Oracle database...")
 df = oracle_conn.execute_query(query)
 print("Query executed successfully.")

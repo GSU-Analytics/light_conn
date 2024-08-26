@@ -22,7 +22,7 @@ Attributes:
 
 Example usage with lightoracle:
     from lightoracle import LightOracleConnection
-    from config import oracle_user, oracle_dsn, lib_dir
+    from config import user, dsn, lib_dir
     
     oracle_conn = LightOracleConnection(user=user,
                                         dsn=dsn,
@@ -39,5 +39,5 @@ Note:
 
 # Oracle Connection details
 user = "dummy_name"  # The Oracle user
-lib_dir = ""
 dsn = ""  # The Data Source Name for the Oracle database
+lib_dir = ""
