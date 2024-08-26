@@ -39,7 +39,7 @@ for users who only need to use the package without contributing to its developme
    ```
 3. **Update the Package in Existing Environment**:
    ```cmd
-   pip install --upgrade git+https://github.com/GSU-Analytics/light_conn.git
+   pip install git+https://github.com/GSU-Analytics/light_conn.git -U
    ```
 
 ### Local Installation
