@@ -85,9 +85,9 @@ Here's an example of how to set up `config_example.py`:
 # config.py
 
 # Oracle Connection details
-oracle_user = "your_username_here"
+user = "your_username_here"
 lib_dir = "C:/path/to/your/oracle/client/libraries"  # Only set this if necessary
-oracle_dsn = "your_dsn_here"
+dsn = "your_dsn_here"
 ```
 
 ### Connecting to the Database
@@ -98,7 +98,7 @@ With your `config.py` file set up, you can use the `LightOracleConnection` class
 
 # main.py
 from lightoracle import LightOracleConnection
-from config import oracle_user, lib_dir, oracle_dsn
+from config import user, lib_dir, dsn
 
 # Create a connection instance with the configured parameters
 oracle_conn = LightOracleConnection(oracle_user, oracle_dsn, lib_dir)

@@ -11,21 +11,21 @@ This module contains configuration details used by the `oracle_connect.py` for c
 It specifies usernames, database names, hostnames, port numbers, and driver information required for establishing 
 database connections.
 
-The `oracle_user`, `lib_dir`, and `oracle_dsn` are used for Oracle database connections, specifying the Oracle user, 
+The `user`, `lib_dir`, and `dsn` are used for Oracle database connections, specifying the Oracle user, 
 library directory (for Oracle Client libraries), and the Data Source Name (DSN) for the Oracle database.
 
 Attributes:
 
-    oracle_user (str): The username for the Oracle database connection.
+    user (str): The username for the Oracle database connection.
     lib_dir (str): The directory path where the Oracle Client libraries are located.
-    oracle_dsn (str): The Data Source Name for the Oracle database connection.
+    dsn (str): The Data Source Name for the Oracle database connection.
 
 Example usage with lightoracle:
     from lightoracle import LightOracleConnection
     from config import oracle_user, oracle_dsn, lib_dir
     
-    oracle_conn = LightOracleConnection(user=oracle_user,
-                                        dsn=oracle_dsn,
+    oracle_conn = LightOracleConnection(user=user,
+                                        dsn=dsn,
                                         lib_dir=lib_dir)
     oracle_conn.connect()
 
@@ -38,6 +38,6 @@ Note:
 """
 
 # Oracle Connection details
-oracle_user = "dummy_name"  # The Oracle user
+user = "dummy_name"  # The Oracle user
 lib_dir = ""
-oracle_dsn = ""  # The Data Source Name for the Oracle database
+dsn = ""  # The Data Source Name for the Oracle database
