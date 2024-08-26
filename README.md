@@ -111,7 +111,7 @@ oracle_conn.test_connection()
 
 ### Important Notes
 
-- Always ensure that the `oracle_user`, `lib_dir`, and `oracle_dsn` attributes in `config.py` are updated with the correct information corresponding to your Oracle database setup.
+- Always ensure that the `user`, `lib_dir`, and `dsn` attributes in `config.py` are updated with the correct information corresponding to your Oracle database setup.
 - Never commit sensitive information, such as your actual Oracle username or DSN, to a public repository. It's recommended to use environment variables or a secure credential management system for handling sensitive data.
 - If you encounter any issues with connecting to the Oracle database, verify that the Oracle Instant Client is correctly installed and configured on your system. You can find more information and a detailed installation guide on the [Oracle Instant Client website](https://www.oracle.com/database/technologies/instant-client.html).
 
