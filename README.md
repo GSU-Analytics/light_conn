@@ -117,6 +117,8 @@ oracle_conn.test_connection()
 
 ## Examples
 
+### Example 1: Executing a Query and Saving Results to CSV
+
 See the `example.py` file for a simple example of how to use the `LightOracleConnection` class to connect to an Oracle database and execute a query. This will fetch the first 20 rows of student data from the `edwprd.sdstumain` table and save the results to a CSV file.
 
 ```python
@@ -146,6 +148,26 @@ print("Query executed successfully.")
 print("Saving query results to CSV file...")
 df.to_csv('example.csv', index=False)
 print("Results saved to example.csv.")
+```
+
+### Example 2: Resting the User Password
+
+See the `reset_password_example.py` file for an example of how to use the `LightOracleConnection` class to reset a user's password in an Oracle database. This script will prompt you to enter a new password and then test the connection with the new password.
+
+```python
+# reset_password_example.py
+
+from lightoracle import LightOracleConnection
+from config import user, dsn, lib_dir
+
+# Create a connection instance with your current credentials
+conn = LightOracleConnection(user, dsn, lib_dir)
+
+# Reset the password; you will be prompted to enter a new password
+conn.reset_password()
+
+# Test the connection with the newly set password
+conn.test_connection()
 ```
 
 For more information, refer to the examples provided in `lightoracle/oracle_connect.py` for details on how to use this package.
